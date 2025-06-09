@@ -4,7 +4,7 @@ format long;
 % 设定时间
 point_num = 20;
 year = 2025; month = 1; day = 1;
-frequency = 3;
+frequency = 1;
 
 for hour = 0:2:(2*frequency-1)
     disp hour
@@ -162,9 +162,9 @@ axis equal;
 %view(50, 40);
 
 % 绘制地球
-%[xe, ye, ze] = sphere(50);
-%earth_radius = 6371;
-%hold on;
-%surf(earth_radius*xe, earth_radius*ye, earth_radius*ze, ...
-%    'FaceColor', [0.6 0.8 1], 'EdgeColor', 'none', 'FaceAlpha', 0.3);
-%legend('卫星轨迹', '地球');
+[xe, ye, ze] = sphere(50);
+earth_radius = 6371;
+hold on;
+surf(earth_radius*xe, earth_radius*ye, earth_radius*ze, ...
+    'FaceColor', [0.6 0.8 1], 'EdgeColor', 'none', 'FaceAlpha', 0.3);
+legend('卫星轨迹', '地球');
